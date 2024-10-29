@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brick Breaker Game</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SweetAlert2 CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div id="themeSelect">
+        <h2>Select Background Theme</h2>
+        <button id="nightSkyBtn">Night Sky</button>
+        <button id="forestBtn">Forest</button>
+    </div>
+    <div id="timeBoard">Time Remaining: 180s</div>
+<canvas id="gameCanvas"></canvas>
+
+    <div id="difficultySelect" class="hidden">
+        <h2>Select Difficulty</h2>
+        <button id="easyBtn">Easy</button>
+        <button id="mediumBtn">Medium</button>
+        <button id="hardBtn">Hard</button>
+    </div>
+    <canvas id="gameCanvas" class="hidden"></canvas>
+    <div id="scoreBoard" class="hidden">Score: 0</div>
+    <div id="livesBoard">Lives: 3</div>
+    <div id="gameOver" class="hidden">
+        <h1>Game Over!</h1>
+        <button id="restartBtn">Restart</button>
+    </div>
+    
+    <div id="levelComplete" class="hidden">
+        <h1>Level Complete!</h1>
+        <p>Congratulations! You have completed this level.</p>
+    </div>    
+    <audio id="bgMusic" src="sound\midnight-quirk-255361.mp3" loop></audio>
+    <audio id="hitSound" src="sound\swing2.mp3"></audio>
+    <script src="script.js"></script>
+</body>
+</html>

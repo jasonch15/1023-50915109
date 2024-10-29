@@ -1,0 +1,103 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+#themeSelect, #difficultySelect {
+    position: absolute;
+    text-align: center;
+    top: 30%;
+}
+
+#themeSelect button, #difficultySelect button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+canvas {
+    background-color: #222;
+    border: 2px solid white;
+}
+
+#scoreBoard {
+    color: white;  /* 設置文字為白色 */
+    font-weight: bold;  /* 設置文字為粗體 */
+    text-align: center;  /* 文字置中 */
+    font-size: 24px;  /* 設置文字大小 */
+    position: absolute;  /* 絕對定位 */
+    top: 10px;  /* 距離畫布頂部 10px */
+    width: 100%;  /* 讓分數欄寬度覆蓋整個畫布 */
+}
+
+#livesBoard {
+    color: white;  /* 設置文字為白色 */
+    font-weight: bold;  /* 設置文字為粗體 */
+    text-align: center;  /* 文字置中 */
+    font-size: 24px;  /* 設置文字大小 */
+    position: absolute;  /* 絕對定位 */
+    top: 80px;  /* 距離畫布頂部 80px */
+    width: 100%;  /* 讓生命欄寬度覆蓋整個畫布 */
+}
+
+
+#timeBoard {
+    color: white;  /* 設置文字為白色 */
+    font-weight: bold;  /* 設置文字為粗體 */
+    text-align: center;  /* 文字置中 */
+    font-size: 24px;  /* 設置文字大小 */
+    position: absolute;  /* 絕對定位 */
+    top: 50px;  /* 距離畫布頂部 50px */
+    width: 100%;  /* 讓時間欄寬度覆蓋整個畫布 */
+}
+
+
+#gameOver {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+}
+
+#gameOver.hidden, #scoreBoard.hidden, #difficultySelect.hidden, #themeSelect.hidden {
+    display: none;
+}
+
+#levelComplete {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 50px;
+    border-radius: 10px;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#levelComplete.show {
+    opacity: 1;
+}
+
+.hidden {
+    display: none;
+}
